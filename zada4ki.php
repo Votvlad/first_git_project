@@ -6,15 +6,24 @@
  * Time: 00:16
  */
 
+/*Дана строка. Вывести ее три раза через запятую и 
+  показать количество символов в ней.
+*/
+function repeatString($string) {
+$sum = strlen($string);
+return str_repeat($string . ",", 3). $sum;
+
+}
+print_r(repeatString('Zurbagan'));
+
+echo "<br>";
+
 /*
  * Дана строка. Вывести первый, последний и средний (если он есть)) символы.
  */
 
-
-
-/*function showSym($str) {
+function showSym($str) {
     $result = strlen($str);
-    $even = '';
     if (($result % 2) === 0) {
         $symbols = "{$str[0]}{$str[$result - 1]}";
 
@@ -27,7 +36,7 @@
      return $symbols;
 }
    print_r(showSym('Melchisedek'));
-*/
+
 echo "<br>";
 /*
  * Дана строка. Вывести первые три символа и последний три символа,
@@ -35,18 +44,20 @@ echo "<br>";
  * какова длина строки.
 */
 function severalSym ($str) {
-    $chars = strlen($str);
-
-    if ($chars > 5){
-        $symbols = substr($str, 0, 3) . substr($str, -3);
-        return $symbols;
+    $length = strlen($str);
+    
+	if ($length > 5){
+		$symbols = substr($str, 0, 3) . substr($str, -3);
+    
+	} else {
+        $symbols = (str_repeat($str[0], $length));
+		
     }
-    else {
-        return str_repeat($str[0], $result);
+            return $symbols;
     }
-    print_r(severalSym('Hello!'));
 
-}
+    print_r(severalSym('Avess'));
+
+
 echo '<br>';
-$result = strlen('Hello!');
-return (str_repeat('Hello!'[0], $result));
+
