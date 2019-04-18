@@ -23,12 +23,12 @@ echo "<br>";
  */
 
 function showSym($str) {
-    $result = strlen($str);
-    if (($result % 2) === 0) {
-        $symbols = "{$str[0]}{$str[$result - 1]}";
+    $length = strlen($str);
+    if (($length % 2) === 0) {
+        $symbols = "{$str[0]}{$str[$length - 1]}";
 
-    }elseif ($result > 1) {
-        $symbols = $str[0] .$str[$result - 1] .$str[($result - 1) / 2];
+    }elseif ($length > 1) {
+        $symbols = $str[0] .$str[$length - 1] .$str[($length - 1) / 2];
     } else {
         return $str;
     }
@@ -60,4 +60,12 @@ function severalSym ($str) {
 
 
 echo '<br>';
+/*
+Сформировать строку из 10 символов. 
+На четных позициях должны находится четные цифры, на нечетных позициях - буквы.
+*/
+
+function lettersAndnumbers ($str) {
+	
+}
 
